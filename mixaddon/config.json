@@ -1,0 +1,45 @@
+{
+  "name": "Mixlight",
+  "version": "0.01",
+  "slug": "mixlight",
+  "description": "Mixlight add-on for Raspbery PI shield",
+  "url": "https://mixlight.ro/",
+  "arch": [
+    "armv7"
+  ],
+  "startup": "services",
+  "boot": "auto",
+  "hassio_api": false,
+  "hassio_role": "manager",
+  "full_access": "yes",
+  "kernel_modules": "yes",  
+  "ingress": "true",
+  "panel_title": "Mixlight",
+  "options": {
+    "mqtt_broker": "localhost",
+    "mqtt_port": 1883,
+    "mqtt_user": "user",
+    "mqtt_password": "password",
+    "mqtt_keepalive": 30,
+    "mqtt_client_id": "MIXLIGHT",
+    "hass_prefix": "homeassistant",
+    "log_level": "debug"
+  },
+  "schema": {
+    "mqtt_broker": "str",
+    "mqtt_port": "int(1,65535)",
+    "mqtt_user": "str",
+    "mqtt_password": "str",
+    "mqtt_keepalive": "int(1,3600)",
+    "mqtt_client_id": "str",
+    "hass_prefix": "str",
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)"
+  },
+  "ports": {
+    "8099/tcp": 8099
+  },
+  "map": [
+    "config:rw",
+    "share:rw"
+  ]
+}
