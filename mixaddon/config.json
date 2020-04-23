@@ -4,6 +4,7 @@
   "slug": "mixlight",
   "description": "Mixlight add-on for Raspbery PI shield",
   "url": "https://mixlight.ro/",
+  "image": "lmadean/mixaddon",
   "arch": [
     "armv7"
   ],
@@ -41,6 +42,5 @@
   "map": [
     "config:rw",
     "share:rw"
-  ],
-  "image": "lmadean/mixaddon:latest"
+  ]
 }
