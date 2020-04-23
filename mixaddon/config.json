@@ -41,5 +41,7 @@
   "map": [
     "config:rw",
     "share:rw"
-  ]
+  ],
+  "image": "lmadean/mixaddon:latest"
+
 }
