@@ -17,20 +17,19 @@
     "SYS_RAWIO"
   ],
   "devices": [
-    "/dev/mem:/dev/mem:rwm"
+    "/dev/mem:/dev/mem:rwm",
+    "/dev/spidev0.0:/dev/spidev0.0:rwm",
+    "/dev/spidev0.1:/dev/spidev0.1:rwm"
+  ],
+  "discovery": [
+    "mqtt"
   ],
   "apparmor": false,
-  "full_access": "yes",
   "ingress": "true",
   "ingress_port": 8099,
   "panel_title": "Mixlight",
-  "panel_icon": "ingress.png",
+  "panel_icon": "mdi:spotlight-beam",
   "options": {
-    "mqtt_broker": "localhost",
-    "mqtt_port": 1883,
-    "mqtt_user": "user",
-    "mqtt_password": "password",
-    "mqtt_keepalive": 30,
     "mqtt_client_id": "MIXLIGHT",
     "hass_prefix": "homeassistant",
     "log_level": "debug"
