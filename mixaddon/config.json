@@ -1,6 +1,6 @@
 {
   "name": "Mixlight",
-  "version": "0.01",
+  "version": "0.02",
   "slug": "mixlight",
   "description": "Mixlight add-on for Raspbery PI shield",
   "url": "https://mixlight.ro/",
@@ -10,10 +10,17 @@
   ],
   "startup": "services",
   "boot": "auto",
-  "hassio_api": false,
+  "hassio_api": true,
   "hassio_role": "manager",
+  "gpio": true,
+  "privileged": [
+    "SYS_RAWIO"
+  ],
+  "devices": [
+    "/dev/mem:/dev/mem:rwm"
+  ],
+  "apparmor": false,
   "full_access": "yes",
-  "kernel_modules": "yes",  
   "ingress": "true",
   "ingress_port": 8099,
   "panel_title": "Mixlight",
