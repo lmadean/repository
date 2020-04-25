@@ -30,6 +30,7 @@
   "ingress_port": 8099,
   "panel_title": "Mixlight",
   "panel_icon": "mdi:spotlight-beam",
+  "webui": "http://[HOST]:[PORT:8099]",
   "options": {
     "mqtt_client_id": "MIXLIGHT",
     "hass_prefix": "homeassistant",
