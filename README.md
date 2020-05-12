@@ -1,2 +1,3 @@
-# repository
-public repository for the mixaddon
+# Mixlight repository
+
+Public repository for the Mixlight Home assistant Add-on
