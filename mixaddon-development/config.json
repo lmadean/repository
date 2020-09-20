@@ -1,10 +1,10 @@
 {
   "name": "Mixlight Development",
-  "version": "0.15",
-  "slug": "mixlight-dev",
+  "version": "0.16",
+  "slug": "mixlight-devel",
   "description": "Mixlight add-on for Raspbery PI shield (Development)",
   "url": "https://mixlight.ro/",
-  "image": "lmadean/{arch}-mixaddon",
+  "image": "lmadean/{arch}-mixaddon-devel",
   "arch": [
     "armv7"
   ],
