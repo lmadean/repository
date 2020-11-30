@@ -19,7 +19,6 @@
   ],
   "devices": [
     "/dev/mem:/dev/mem:rwm",
-    "/dev/serial0:/dev/serial0:rwm",
     "/dev/spidev0.0:/dev/spidev0.0:rwm",
     "/dev/spidev0.1:/dev/spidev0.1:rwm"
   ],

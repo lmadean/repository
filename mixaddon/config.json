@@ -18,8 +18,6 @@
   ],
   "devices": [
     "/dev/mem:/dev/mem:rwm",
-    "/dev/ttyS0:/dev/ttyS0:rwm",
-    "/dev/ttyAMA0:/dev/ttyAMA0:rwm",
     "/dev/spidev0.0:/dev/spidev0.0:rwm",
     "/dev/spidev0.1:/dev/spidev0.1:rwm"
   ],
