@@ -27,14 +27,14 @@
   ],
   "apparmor": false,
   "ingress": "false",
-  "ingress_port": 8099,
+  "ingress_port": 8999,
   "panel_title": "Mixlight",
   "panel_icon": "mdi:spotlight-beam",
-  "webui": "http://[HOST]:[PORT:8099]",
+  "webui": "http://[HOST]:[PORT:8999]",
   "options": {
     "mqtt_client_id": "MIXLIGHT",
     "hass_prefix": "homeassistant",
-    "log_level": "debug"
+    "log_level": "info"
   },
   "schema": {
     "mqtt_broker": "str?",
@@ -47,7 +47,7 @@
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?"
   },
   "ports": {
-    "8099/tcp": 8099
+    "8999/tcp": 8999
   },
   "map": [
     "config:rw",
