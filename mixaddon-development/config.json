@@ -13,14 +13,14 @@
   "hassio_api": true,
   "hassio_role": "manager",
   "gpio": true,
-  "auto_uart": true,
+  "uart": true,
   "privileged": [
     "SYS_RAWIO"
   ],
   "devices": [
-    "/dev/mem:/dev/mem:rwm",
-    "/dev/spidev0.0:/dev/spidev0.0:rwm",
-    "/dev/spidev0.1:/dev/spidev0.1:rwm"
+    "/dev/mem",
+    "/dev/spidev0.0",
+    "/dev/spidev0.1"
   ],
   "services": [
     "mysql:want", 
