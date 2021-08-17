@@ -33,19 +33,23 @@
   "panel_icon": "mdi:spotlight-beam",
   "webui": "http://[HOST]:[PORT:8099]",
   "options": {
+    "mqtt_local": true,
+    "mqtt_remote": false,
     "mqtt_client_id": "MIXLIGHT",
     "hass_prefix": "homeassistant",
     "log_level": "debug"
   },
   "schema": {
+    "mqtt_local": "bool?",
+    "mqtt_remote": "bool?",
     "mqtt_broker": "str?",
-    "mqtt_port": "int(1,65535)?",
+    "mqtt_port": "port?",
     "mqtt_user": "str?",
     "mqtt_password": "str?",
     "mqtt_keepalive": "int(1,3600)?",
     "mqtt_client_id": "str",
     "hass_prefix": "str",
-    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?"
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
   },
   "ports": {
     "8099/tcp": 8099
