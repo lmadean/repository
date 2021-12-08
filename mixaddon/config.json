@@ -1,6 +1,6 @@
 {
   "name": "Mixlight",
-  "version": "0.35",
+  "version": "0.36",
   "slug": "mixlight",
   "description": "Mixlight add-on for Raspbery PI shield",
   "url": "https://mixlight.ro/",
@@ -49,6 +49,7 @@
     "mqtt_keepalive": "int(1,3600)?",
     "mqtt_client_id": "str",
     "hass_prefix": "str",
+    "hardware_revision": "str?",
     "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
   },
   "ports": {
