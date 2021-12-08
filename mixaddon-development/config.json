@@ -47,6 +47,7 @@
     "mqtt_password": "str?",
     "mqtt_keepalive": "int(1,3600)?",
     "mqtt_client_id": "str",
+    "hardware_revision": "str?",
     "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
   },
   "ports": {
