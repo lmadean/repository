@@ -14,9 +14,7 @@
   "hassio_role": "manager",
   "gpio": true,
   "uart": true,
-  "privileged": [
-    "SYS_RAWIO"
-  ],
+  "privileged": true,
   "devices": [
     "/dev/mem",
     "/dev/gpiomem",
