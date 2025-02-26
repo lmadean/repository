@@ -1,6 +1,6 @@
 {
   "name": "Mixlight Development",
-  "version": "0.96",
+  "version": "0.97",
   "slug": "mixlight-devel",
   "description": "Mixlight add-on for Raspbery PI shield (Development)",
   "url": "https://mixlight.ro/",
@@ -20,6 +20,7 @@
   "devices": [
     "/dev/mem",
     "/dev/gpiomem",
+    "/dev/vcio",
     "/dev/spidev0.0",
     "/dev/spidev0.1"
   ],
