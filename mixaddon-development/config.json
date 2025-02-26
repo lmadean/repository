@@ -1,6 +1,6 @@
 {
   "name": "Mixlight Development",
-  "version": "0.98",
+  "version": "0.99",
   "slug": "mixlight-devel",
   "description": "Mixlight add-on for Raspbery PI shield (Development)",
   "url": "https://mixlight.ro/",
@@ -14,7 +14,10 @@
   "hassio_role": "manager",
   "gpio": true,
   "uart": true,
-  "privileged": true,
+  "privileged": [
+    "SYS_RAWIO",
+    "SYS_ADMIN"
+  ],
   "devices": [
     "/dev/mem",
     "/dev/gpiomem",
