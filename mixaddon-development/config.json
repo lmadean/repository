@@ -1,12 +1,13 @@
 {
   "name": "Mixlight Development",
-  "version": "0.116",
+  "version": "0.117",
   "slug": "mixlight-devel",
   "description": "Mixlight add-on for Raspbery PI shield (Development)",
   "url": "https://mixlight.ro/",
   "image": "lmadean/{arch}-mixaddon-devel",
   "arch": [
-    "armv7"
+    "armv7",
+    "aarch64"
   ],
   "startup": "services",
   "boot": "auto",
