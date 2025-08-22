@@ -6,8 +6,7 @@
   "url": "https://mixlight.ro/",
   "image": "lmadean/{arch}-mixaddon-devel",
   "arch": [
-    "armv7",
-    "aarch64"
+    "armv7"
   ],
   "startup": "services",
   "boot": "auto",
