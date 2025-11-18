@@ -8,6 +8,7 @@
   "arch": [
     "armv7"
   ],
+  "init": false,
   "startup": "services",
   "boot": "auto",
   "hassio_api": true,

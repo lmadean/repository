@@ -8,6 +8,7 @@
   "arch": [
     "armv7"
   ],
+  "init": false,
   "startup": "services",
   "boot": "auto",
   "hassio_api": true,
@@ -32,7 +33,7 @@
     "mqtt:want"
   ],
   "apparmor": false,
-  "ingress": "true",
+  "ingress": true,
   "ingress_port": 8099,
   "panel_title": "Mixlight",
   "panel_icon": "mdi:spotlight-beam",
@@ -41,6 +42,7 @@
     "mqtt_local": true,
     "mqtt_remote": false,
     "mqtt_client_id": "MIXLIGHT",
+    "hass_prefix": "homeassistant",
     "log_level": "debug"
   },
   "schema": {
@@ -52,6 +54,7 @@
     "mqtt_password": "str?",
     "mqtt_keepalive": "int(1,3600)?",
     "mqtt_client_id": "str",
+    "hass_prefix": "str",
     "hardware_revision": "str?",
     "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
   },
