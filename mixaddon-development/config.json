@@ -6,7 +6,7 @@
   "url": "https://mixlight.ro/",
   "image": "lmadean/{arch}-mixaddon-devel",
   "arch": [
-    "armv7"
+    "aarch64"
   ],
   "init": false,
   "startup": "services",
@@ -23,6 +23,7 @@
   "devices": [
     "/dev/mem",
     "/dev/gpiomem",
+    "/dev/gpiochip0",
     "/dev/gpiochip4",
     "/dev/vcio",
     "/dev/spidev0.0",
