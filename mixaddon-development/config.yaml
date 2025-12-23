@@ -1,0 +1,60 @@
+name: Mixlight Development
+version: "0.126"
+slug: mixlight-devel
+description: Mixlight add-on for Raspbery PI shield (Development)
+url: https://mixlight.ro/
+image: lmadean/{arch}-mixaddon-devel
+arch:
+  - aarch64
+init: false
+startup: services
+boot: auto
+hassio_api: true
+hassio_role: manager
+gpio: true
+uart: true
+privileged:
+  - SYS_RAWIO
+  - SYS_ADMIN
+  - SYS_NICE
+devices:
+  - /dev/mem
+  - /dev/gpiomem
+  - /dev/gpiochip0
+  - /dev/gpiochip4
+  - /dev/vcio
+  - /dev/spidev0.0
+  - /dev/spidev0.1
+services:
+  - mysql:want
+  - mqtt:want
+apparmor: false
+ingress: true
+ingress_port: 8099
+panel_title: Mixlight
+panel_icon: mdi:spotlight-beam
+webui: http://[HOST]:[PORT:8099]
+options:
+  mqtt_local: true
+  mqtt_remote: false
+  mqtt_client_id: MIXLIGHT
+  hass_prefix: homeassistant
+  log_level: debug
+schema:
+  mqtt_local: bool?
+  mqtt_remote: bool?
+  mqtt_broker: str?
+  mqtt_port: port?
+  mqtt_user: str?
+  mqtt_password: str?
+  mqtt_keepalive: int(1,3600)?
+  mqtt_client_id: str
+  hass_prefix: str
+  hardware_revision: str?
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+ports:
+  8099/tcp: 8099
+map:
+  - config:rw
+  - share:rw
+  - data:rw
