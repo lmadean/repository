@@ -1,11 +1,11 @@
-name: Mixlight Development
-version: "0.128"
-slug: mixlight-devel
-description: Mixlight add-on for Raspbery PI shield (Development)
+name: Mixlight
+version: "0.112"
+slug: mixlight
+description: Mixlight add-on for Raspbery PI shield
 url: https://mixlight.ro/
-image: lmadean/{arch}-mixaddon-devel
+image: lmadean/{arch}-mixaddon
 arch:
-  - aarch64
+  - armv7
 init: false
 startup: services
 boot: auto
@@ -29,17 +29,17 @@ services:
   - mysql:want
   - mqtt:want
 apparmor: false
-ingress: true
-ingress_port: 8099
+ingress: "false"
+ingress_port: 8999
 panel_title: Mixlight
 panel_icon: "mdi:spotlight-beam"
-webui: "http://[HOST]:[PORT:8099]"
+webui: "http://[HOST]:[PORT:8999]"
 options:
   mqtt_local: true
   mqtt_remote: false
   mqtt_client_id: MIXLIGHT
   hass_prefix: homeassistant
-  log_level: debug
+  log_level: info
 schema:
   mqtt_local: bool?
   mqtt_remote: bool?
@@ -53,7 +53,7 @@ schema:
   hardware_revision: str?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
 ports:
-  8099/tcp: 8099
+  8999/tcp: 8999
 map:
   - config:rw
   - share:rw
