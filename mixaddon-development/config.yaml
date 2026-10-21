@@ -1,7 +1,8 @@
-name: Mixlight devel
-version: "0.140"
+name: Mixlight Development
+version: "0.200"
 slug: mixlight-devel
-description: Mixlight add-on for Raspbery PI shield (Development)
+description: Mixlight add-on for Raspberry PI shield (Development)
+stage: experimental
 url: https://mixlight.ro/
 image: lmadean/{arch}-mixaddon-devel
 arch:
