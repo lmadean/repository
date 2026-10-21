@@ -1,3 +1,5 @@
+Running 64-bit Home Assistant OS? Use Mixlight 64-bit; see its Documentation tab for migrating.
+
 # Home Assistant Mixlight Add-on
 
 ## Installation
