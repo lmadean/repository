@@ -1,5 +1,5 @@
-name: Mixlight Development
-version: "0.139"
+name: Mixlight devel
+version: "0.140"
 slug: mixlight-devel
 description: Mixlight add-on for Raspbery PI shield (Development)
 url: https://mixlight.ro/
@@ -8,7 +8,6 @@ arch:
   - aarch64
 init: false
 startup: services
-boot: auto
 hassio_api: true
 hassio_role: manager
 gpio: true
@@ -30,10 +29,8 @@ services:
   - mqtt:want
 apparmor: false
 ingress: true
-ingress_port: 8099
 panel_title: Mixlight
 panel_icon: "mdi:spotlight-beam"
-webui: "http://[HOST]:[PORT:8099]"
 options:
   mqtt_local: true
   mqtt_remote: false
@@ -52,9 +49,10 @@ schema:
   hass_prefix: str
   hardware_revision: str?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
-ports:
-  8099/tcp: 8099
 map:
-  - config:rw
-  - share:rw
-  - data:rw
+  - type: config
+    read_only: false
+  - type: share
+    read_only: false
+  - type: data
+    read_only: false
