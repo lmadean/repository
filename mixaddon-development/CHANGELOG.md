@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.203
+
+- No changes to the add-on itself since 0.202.
+
 ## 0.202
 
 - The startup log no longer shows a Python syntax warning from the shield service.
@@ -13,6 +17,7 @@
 - The configuration editor now refuses to save an empty or broken configuration instead of overwriting it.
 - A configuration that cannot be read is no longer opened as an empty editor, and saving is refused when the file has settings the editor cannot keep.
 - Add-on icons and logos now have transparent backgrounds, and the Mixlight 64-bit add-on shows its icon and logo.
+- Saved entity states are kept in `/config/mixlight-settings.json`. On startup, `/data/store.json` is copied there when the new file is missing, and the old file is left in place.
 
 ## 0.201
 

@@ -1,5 +1,5 @@
 name: Mixlight Development
-version: "0.202"
+version: "0.203"
 slug: mixlight-devel
 description: Mixlight add-on for Raspberry PI shield (Development)
 stage: experimental
