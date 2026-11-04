@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.204
+
+- With two or more relay boards, each relay shows the right state in Home Assistant, and switching one relay leaves the others unchanged.
+- With no relay boards configured, the add-on no longer sends the relay data command to the shield. Setups with one or more relay boards are unchanged.
+- A temperature, humidity, or other input reading with no value now shows as unavailable in Home Assistant instead of 0. A real reading of 0 still shows as 0. 0% humidity shows as unavailable. The same happens when that board does not answer or the read fails. Input-board ADC entries have no sample, so they stay unavailable and can be removed.
+- Lights, switches, dimmers, and other outputs keep their last state. They follow the add-on only: a crash, kill, or power loss shows them unavailable. A normal stop removes the entities.
+- A thermostat stays available when it has no room temperature and shows that temperature as unknown. Heating and cooling are unchanged.
+- If the broker reconnects, the last published state is sent to Home Assistant again and nothing in the add-on acts on that replay.
+
 ## 0.203
 
 - No changes to the add-on itself since 0.202.
