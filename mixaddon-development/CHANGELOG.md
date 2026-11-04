@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.205
+
+- The first press of a button after the add-on starts switches the light. A button that is already held, or a switch that is already on, does not change the lights when the add-on starts.
+
 ## 0.204
 
 - With two or more relay boards, each relay shows the right state in Home Assistant, and switching one relay leaves the others unchanged.
