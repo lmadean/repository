@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.206
+
+- Restarting the MQTT broker no longer clears input readings or shows them unavailable. When the broker is back, each entity shows the state it kept during the outage, and lights and covers do not move.
+
 ## 0.205
 
 - The first press of a button after the add-on starts switches the light. A button that is already held, or a switch that is already on, does not change the lights when the add-on starts.
