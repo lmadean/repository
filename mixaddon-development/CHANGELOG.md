@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.207
+
+- If the shield does not start, or it never answers, the add-on logs the error, waits, and exits so it can restart, instead of staying up and reporting that it is fine. A short or incomplete reply is logged and that command fails, instead of crashing the service.
+- Wall buttons and relays still work when the MQTT broker is stuck, the network drops, or the broker is not running at startup. The add-on connects when the broker comes up, and lights and covers do not move on their own.
+- Boards marked `dmx: true` (unquoted) are now treated as DMX boards, as the docs always said, so check those boards.
+
 ## 0.206
 
 - Restarting the MQTT broker no longer clears input readings or shows them unavailable. When the broker is back, each entity shows the state it kept during the outage, and lights and covers do not move.
