@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.208
+
+- Only dimmer levels and light colours are saved. Reloading the configuration page does not drop a level that is being saved, startup does not replace those saved levels with defaults, and a broken settings file is left unchanged and shown in Home Assistant.
+- The configuration editor follows the Home Assistant theme: dark when Home Assistant is dark, light when it is light, and it switches when Home Assistant switches.
+- Input boards are no longer given a DMX line when the configuration is saved. They have no bus setting. A DMX line already written on an input board is left as it is.
+- Saving the configuration keeps boards and settings the editor does not show, including covers, climates, and options such as timer and area.
+- The configuration editor asks whether a new relay board is on Mixbus or DMX, shows that bus on output boards, and saves each board's dmx as chosen or loaded. Dimming and RGB boards are saved as DMX. An output board with no DMX setting is saved as DMX. RGB channel orders rgb, rbg, grb, gbr, brg, and bgr are shown and saved as written. A dimmer or an RGB light on Mixbus cannot be saved, and a restored backup is refused in that case.
+- The add-on stays idle when another Mixlight add-on is already running, and the log names that add-on. It starts on its own once the other one stops. Restarting this add-on does not count as another one. Two add-ons that start in the same couple of seconds, or that both start while the broker is down, can both run. If the broker dies first and keeps the last online message, the other add-on stays idle until this one starts again.
+- Entities you remove from the configuration disappear from Home Assistant after a restart. Entities that are still configured stay, with their state unchanged, and lights and covers do not move.
+- If the add-on cannot use SPI, the log explains how to uncomment `#dtparam=spi=on` in `config.txt` on the boot partition and reboot. It then waits and exits so it can restart. A shield that is there but does not answer is unchanged.
+- When saved entity states have not been stored yet, startup logs a warning and continues with the default states.
+
 ## 0.207
 
 - If the shield does not start, or it never answers, the add-on logs the error, waits, and exits so it can restart, instead of staying up and reporting that it is fine. A short or incomplete reply is logged and that command fails, instead of crashing the service.
