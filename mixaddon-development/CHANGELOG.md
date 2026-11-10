@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.209
+
+- A stopped or crashed Mixlight add-on no longer blocks startup. When another one really is running, the log names that add-on, whether it was seen from MQTT or the Supervisor, and its state.
+
 ## 0.208
 
 - Only dimmer levels and light colours are saved. Reloading the configuration page does not drop a level that is being saved, startup does not replace those saved levels with defaults, and a broken settings file is left unchanged and shown in Home Assistant.
