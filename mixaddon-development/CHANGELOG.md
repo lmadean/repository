@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.210
+
+- Startup no longer stops because this add-on sees itself as another Mixlight add-on. When a different add-on really is running, the log names that add-on and the slug this one detected for itself.
+
 ## 0.209
 
 - A stopped or crashed Mixlight add-on no longer blocks startup. When another one really is running, the log names that add-on, whether it was seen from MQTT or the Supervisor, and its state.
