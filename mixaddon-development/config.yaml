@@ -1,5 +1,5 @@
 name: Mixlight Development
-version: "0.210"
+version: "0.211"
 slug: mixlight-devel
 description: Mixlight add-on for Raspberry PI shield (Development)
 stage: experimental
@@ -10,6 +10,7 @@ arch:
 init: false
 startup: services
 hassio_api: true
+homeassistant_api: true
 hassio_role: manager
 gpio: true
 uart: true
@@ -38,6 +39,8 @@ options:
   mqtt_client_id: MIXLIGHT
   hass_prefix: homeassistant
   log_level: debug
+  log_categories:
+    - NICE
 schema:
   mqtt_local: bool?
   mqtt_remote: bool?
@@ -50,6 +53,8 @@ schema:
   hass_prefix: str
   hardware_revision: str?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  log_categories:
+    - list(CONFIG|NODE|PROTO|MQTT|NTT|CMD|LINK|SHIELD|API|NICE)?
 map:
   - type: config
     read_only: false
