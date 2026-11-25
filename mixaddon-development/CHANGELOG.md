@@ -1,15 +1,24 @@
 # Changelog
 
+## 0.212
+
+- The configuration editor can load and save virtual boards that hold a climate or a cover, and keeps the settings it does not show.
+- Board Definition lists climates and covers under Virtuals. A climate uses a temperature sensor plus heat and cool outputs, and a cover uses open and close outputs with optional open and close buttons. Virtuals stay out of Button Mappings, and on a phone a channel's type stays readable.
+- Fixed an error when a Modbus air conditioner was stopped or restarted.
+- Modbus air conditioners log mode, target temperature, fan, and swing from Home Assistant, and a room temperature only when it really changes. The thermostat low and high limits are named as limits.
+- Board Definition lists each board under Outputs or Inputs and shows one board at a time. On a phone that list is a Jump to board menu, and the top bar stays on screen without covering the board as you scroll.
+- Button Mappings filters also match what the headers show, including 'Button N', an output's address, and the board name or address underneath.
+
 ## 0.211
 
 - On Button Mappings, the button or entity name is shown on the top line, with the board name or address underneath.
+- Board Definition moves through output boards and input boards a page at a time, and brings a board into view when a save problem refers to one that is on another page.
 - The thermostat logs when Home Assistant changes its mode or target temperature, and when it starts heating, starts cooling, or goes idle.
 - Covers log when they open, close, or stop from Home Assistant or a wall button. An unnamed button reads as a button, and an RGB brightness change says the brightness.
 - Lights, switches, dimmers and RGB lights log a plain line when Home Assistant, a wall button, or a timer changes them. Startup says how many saved states were restored.
 - A later log line can say who caused an action: Home Assistant, a wall button, a timer, the thermostat, or startup restore.
 - If one saved dimmer level or colour cannot be restored, the others still come back, and saving is not left off for the rest of the run. A problem preparing the settings file is shown as a Home Assistant persistent notification and as a warning in the add-on log.
 - When mixlight.yaml has settings this page can't show, that warning is one line with a ! button. Saving stays on only when Mixlight can keep those settings as they are, and the button lists them.
-- Board Definition moves through output boards and input boards a page at a time, and brings a board into view when a save problem refers to one that is on another page.
 - Keys from mixlight.yaml, including 1 and on, are sent to the configuration page as text.
 - The add-on log is quiet by default and shows only human-readable NICE lines. Choose other categories in the add-on options or with the shield control switches.
 
